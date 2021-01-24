@@ -41,7 +41,7 @@ createCard = () => {
    container.append(newCards); 
    switch (numberCards) {
        case 10:
-            container.classList.toggle("level-hard");
+            container.classList.add("level-hard");
            break;
     }
    newCards.addEventListener("click", function() {
