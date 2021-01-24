@@ -1,0 +1,236 @@
+body {
+	background: url(img/Background.png);
+	margin:0;
+}
+
+.game {
+ margin-left: 57px;
+ margin-top: 91px;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.game__one {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.choice {
+ padding: 0 0 59px 0;
+}
+
+.choice__text_big {
+	font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 57px;
+  line-height: 67px;
+  color: #FFFFFF;
+  margin-bottom: 9px;
+  padding: 0 0 0 45px;
+}
+
+.choice__text_small {
+	font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0 0 0 46px;
+}
+
+.level {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0;
+  height: 223px;
+}
+
+.level__choice {
+	font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  color: #FFFFFF;
+  list-style-type: none;
+  margin-bottom: 23px;
+  padding: 0 0 0 55px;
+}
+
+.level__choice_simple {
+	margin-bottom: 24px;
+}
+
+.button {
+  font: 700 32px/37px Roboto, arial, helvetica, sans-serif;
+  color: white;
+  background: #d62b2e;
+  padding: 28px 85px;
+  text-decoration: none;
+  border-radius: 7px;
+  margin-top: 114px;
+  margin-bottom: auto; 
+  height: 36px;
+  width: 182px;
+}
+
+
+.level__choice-romb {
+	background-image: url(img/Rectangle.png);
+	background-repeat: no-repeat;
+	background-position-y: 15px;
+}
+
+.field {
+  display: none;
+}
+
+.card_back {
+	background: url('img/back.png');
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 400px;
+}
+
+.card_front {
+	background: url('img/gameover.png');
+	background-repeat: no-repeat;
+  width: 350px;
+  height: 400px;
+}
+
+.card_bag {
+	background: url('img/bag.png');
+	background-repeat: no-repeat;
+	width: 350px;
+  height: 400px;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.card_back:hover {
+  filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.5));
+  transform: rotateZ(-3.08deg) translateY(-25px) ;
+  transition: 0.5s;
+}
+
+.block {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+.img {
+  width: 521px;
+  height: 417px;
+  background: no-repeat url(img/cards.png);
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 416px 1fr;
+  justify-self: center;
+  grid-gap: 27%;
+  margin-left: 42px;
+}
+
+.level-hard {
+    display: grid;
+    grid-template-columns: 218px 218px 218px 218px 218px;
+    grid-column-gap: 24px;
+    grid-template-rows: 341px 341px;
+    grid-row-gap: 24px;
+    place-content: center;
+}
+
+@media (max-width: 1110px) {
+		.card_back {
+		width: 260px;
+	}
+}
+
+@media (max-width: 950px) {
+	.choice__text_small{
+		font-size: 17px;
+	}
+
+	.choice__text_big {
+		font-size: 53px;
+	}
+}
+
+@media (max-width: 881px) {
+	.choice__text_small{
+		font-size: 17px;
+		width: 825px;
+	}
+
+	.choice__text_big {
+		font-size: 48px;
+		width: 830px;
+	}
+
+	.level__choice {
+		font-size: 42px;
+		padding: 0 0 0 50px;;
+	}
+
+	.level {
+		padding-inline-start: 0;
+	}
+
+	.main {
+		margin: 0;
+		grid-gap: 17%;
+	}
+
+	.game {
+		padding: 41px 0 0 59px;
+	}
+
+	.button {
+		padding: 20px 64px;
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	.card_back {
+		width: 238px;
+	}
+	
+}
+
+@media (max-width: 820px) {
+	.game {
+		padding: 0;
+		margin: 0;
+	}
+
+	.main {
+		grid-gap: 0;
+	}
+
+	.card_back {
+		width: 227px;
+	}
+
+	.card_bag {
+	  width: 234px;
+	}
+
+	.card_front {
+		width: 234px;
+	}
+}
