@@ -8,7 +8,6 @@ let numberCards = 3;
 
 
 lev.forEach(function(element) {
-    element.classList.remove('level__choice-romb');
     element.addEventListener("click", function(){
       lev.forEach(function(element){
             element.classList.remove('level__choice-romb')  
