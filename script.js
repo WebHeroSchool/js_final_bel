@@ -8,7 +8,6 @@ let numberCards = 3;
 
 
 lev.forEach(function(element) {
-    element.classList.remove('level__choice-romb');
     element.addEventListener("click", function(){
       lev.forEach(function(element){
             element.classList.remove('level__choice-romb')  
@@ -41,7 +40,7 @@ createCard = () => {
    container.append(newCards); 
    switch (numberCards) {
        case 10:
-            container.classList.toggle("level-hard");
+            container.classList.add("level-hard");
            break;
     }
    newCards.addEventListener("click", function() {
